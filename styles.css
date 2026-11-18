@@ -1,8 +1,8 @@
 :root {
   --bg-dark: #0f0f13;
   --bg-card: #1a1a22;
-  --accent-red: #ff3344;
-  --accent-purple: #a020f0;
+  --accent-red: #cc60c8;
+  --accent-purple: #7d41a5;
   --accent-blue: #00d2ff;
   --text-main: #ffffff;
   --text-muted: #b0b0c0;
@@ -83,7 +83,7 @@ nav a:hover { color: var(--accent-blue); }
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(255,51,68,0.6);
+  text-shadow: 0 0 20px rgba(84, 2, 92, 0.6);
 }
 
 .btn-primary {
