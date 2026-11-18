@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тур — FANTOM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">FANTOM</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="tour.html">Тур</a></li>
+        <li><a href="music.html">Музыка</a></li>
+      </ul>
+      <div class="burger">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Ближайшие концерты</h2>
+      <p>Выбери город и рассчитай стоимость билетов прямо сейчас.</p>
+
+      <div class="card" style="max-width: 600px; margin: 2rem auto 0;">
+        <h3>Калькулятор билетов</h3>
+
+        <form id="ticket-form">
+          <label>Город концерта:</label>
+          <select id="city" name="city">
+            <option value="msk" data-price="3500">Сургут — 3500 ₽</option>
+            <option value="spb" data-price="3200">Санкт-Петербург — 3200 ₽</option>
+            <option value="ekb" data-price="2800">Екатеринбург — 2800 ₽</option>
+            <option value="nsk" data-price="2700">Новосибирск — 2700 ₽</option>
+            <option value="kzn" data-price="2900">Казань — 2900 ₽</option>
+          </select>
+
+          <label>Категория билета:</label>
+          <select id="category" name="category">
+            <option value="standard" data-multiplier="1">Стандарт ×1</option>
+            <option value="fan" data-multiplier="1.5">Fan Zone ×1.5</option>
+            <option value="premium" data-multiplier="2">Premium ×2</option>
+          </select>
+
+          <label>Количество билетов:</label>
+          <input type="number" id="quantity" value="1" min="1" max="20" />
+
+          <label>VIP-пакет (+1500 ₽ за билет):</label>
+          <input type="checkbox" id="vip" /> Да, добавить VIP-пакет
+
+          <label>Промокод:</label>
+          <input type="text" id="promo" placeholder="AURORA10, MUSIC20, FAN15" />
+          <p id="promo-msg" style="font-size: 0.9rem; margin-top: 4px;"></p>
+
+          <button type="submit" class="btn-primary" style="margin-top: 20px;">Рассчитать стоимость</button>
+        </form>
+
+        <div id="result" style="margin-top: 20px; padding: 15px; background: var(--bg-card); border-radius: 8px; display: none;">
+          <p><strong>Итоговая стоимость:</strong> <span id="total-price">0 ₽</span></p>
+          <p style="font-size: 0.9rem;">В том числе сервисный сбор 5% и VIP-пакет (если выбран).</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 3rem;">Расписание тура</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Сургут</h4>
+          <p>15.11.2026 • Ледовый дворец спорта</p>
+          <p>От 3500 ₽</p>
+        </div>
+        <div class="card">
+          <h4>Санкт-Петербург</h4>
+          <p>20.11.2026 • Ледовый дворец</p>
+          <p>От 3200 ₽</p>
+        </div>
+        <div class="card">
+          <h4>Екатеринбург</h4>
+          <p>25.11.2026 • МТС Live Холл</p>
+          <p>От 2800 ₽</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FANTOM. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
